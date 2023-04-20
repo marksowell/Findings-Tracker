@@ -53,3 +53,8 @@ Now the extension is installed, and you can use it to manage, document, and coll
 With the Findings Tracker Burp Extension, you can easily manage and track your findings during web application assessments, making it simple to maintain organized records of your work.
 
 The ```demo-findings.json``` file provides eight example findings you can use to populate the Findings Tracker for a demo. These findings cover various OWASP Top 10 categories and different severity levels. These findings can be used to demonstrate how to use the Findings Tracker to track different types of vulnerabilities and risks discovered during an application security penetration test.
+
+***Check out my other Burp Suite extension [Info Leakage](https://github.com/marksowell/Info-Leakage)***
+
+## License
+The scripts and documentation in this project are released under the [MIT License](LICENSE)
