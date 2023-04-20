@@ -7,8 +7,6 @@ The Findings Tracker extension allows users to send HTTP requests and responses 
 
 The extension also supports importing and exporting findings as JSON files. This feature makes it easy for users to share and collaborate on findings with their team members or to maintain a historical record of findings across multiple assessment projects.
 
-In summary, the Findings Tracker Burp Suite extension is a valuable tool for security professionals looking to simplify and streamline their web application security testing process. With the Findings Tracker extension, users can efficiently manage, document, and collaborate on security findings discovered during web application assessments.
-
 Overall, this Burp extension provides a simple but effective way to track, manage, and collaborate on security findings discovered during web application assessments, helping security professionals to better protect their systems and data.
 
 ![Screenshot](images/screenshot.png)
