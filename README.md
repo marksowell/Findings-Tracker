@@ -46,7 +46,7 @@ Now the extension is installed, you can use it to track, manage, and collaborate
 
 - To add a new finding manually, click the "Add Finding" button and fill in the relevant details in the table.
 - To create a finding from other Burp Suite tools (such as Proxy, Repeater, or Intruder), right-click on the request/response and select "Send to Findings Tracker".
-- Use the drop-down menus in the table to change the status, OWASP Top 10 category and status of a finding.
+- Use the drop-down menus in the table to change the OWASP Top 10 category and status of a finding.
 - To import findings from a JSON file, click the "Import from JSON" button and select the file. The table will be updated with the imported findings, and the file will be used for future automatic saves.
 - To export findings to a JSON file, click the "Export as JSON" button. If you have previously imported findings, the extension will automatically save the changes to the same JSON file. If not, you will be prompted to choose a location and file name for the export.
 
