@@ -42,7 +42,7 @@ During the installation process, the Findings Tracker extension will create a de
 
 ## Usage
 
-Now the extension is installed, and you can use it to manage, document, and collaborate on security findings discovered during web application assessments. Once the first finding is added you will be prompted to export the findings data to a JSON file. After the data is saved, any future changes in the Findings Tracker will automatically be saved to the file you selected.
+Now the extension is installed, you can use it to manage, document, and collaborate on security findings discovered during web application assessments. Once the first finding is added you will be prompted to export the findings data to a JSON file. After the data is saved, any future changes in the Findings Tracker will automatically be saved to the file you selected.
 
 - To add a new finding manually, click the "Add Finding" button and fill in the relevant details in the table.
 - To create a finding from other Burp Suite tools (such as Proxy, Repeater, or Intruder), right-click on the request/response and select "Send to Findings Tracker".
