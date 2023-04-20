@@ -1,0 +1,82 @@
+[
+    {
+        "Status": "Fail", 
+        "Description": "SQL Injection in login form allows unauthorized access to sensitive user data.", 
+        "Request": "", 
+        "Host": "example.com", 
+        "Response": "", 
+        "OWASP Top 10": "A03: Injection", 
+        "ID": 1, 
+        "Notes": "Vulnerable parameter 'username' in the login form."
+    }, 
+    {
+        "Status": "Exception", 
+        "Description": "Insecure use of weak hashing algorithm (MD5) for password storage.", 
+        "Request": "", 
+        "Host": "example.com", 
+        "Response": "", 
+        "OWASP Top 10": "A02: Cryptographic Failures", 
+        "ID": 2, 
+        "Notes": "Password hashes found to be stored using MD5 in the database."
+    }, 
+    {
+        "Status": "Remediated", 
+        "Description": "Horizontal privilege escalation allows users to access other users' profiles.", 
+        "Request": "", 
+        "Host": "example.com", 
+        "Response": "", 
+        "OWASP Top 10": "A01: Broken Access Control", 
+        "ID": 3, 
+        "Notes": "Changing the user ID in the URL provides unauthorized access to other user profiles."
+    }, 
+    {
+        "Status": "Warning", 
+        "Description": "Outdated jQuery library (version 2.2.4) exposes the application to potential vulnerabilities.", 
+        "Request": "", 
+        "Host": "example.com", 
+        "Response": "", 
+        "OWASP Top 10": "A06: Vulnerable and Outdated Components", 
+        "ID": 4, 
+        "Notes": "Update jQuery library to the latest version to mitigate risks."
+    }, 
+    {
+        "Status": "Remediated", 
+        "Description": "Lack of multi-factor authentication increases the risk of account compromise.", 
+        "Request": "", 
+        "Host": "example.com", 
+        "Response": "", 
+        "OWASP Top 10": "A07: Identification and Authentication Failures", 
+        "ID": 5, 
+        "Notes": "Implement MFA to strengthen account security."
+    }, 
+    {
+        "Status": "Fail", 
+        "Description": "Unnecessary HTTP methods (PUT, DELETE) are enabled on the server.", 
+        "Request": "", 
+        "Host": "example.com", 
+        "Response": "", 
+        "OWASP Top 10": "A05: Security Misconfiguration", 
+        "ID": 6, 
+        "Notes": "Restrict HTTP methods to only those required by the application."
+    }, 
+    {
+        "Status": "Warning", 
+        "Description": "Insufficient logging of security events reduces the ability to detect attacks.", 
+        "Request": "", 
+        "Host": "example.com", 
+        "Response": "", 
+        "OWASP Top 10": "A09: Security Logging and Monitoring Failures", 
+        "ID": 7, 
+        "Notes": "Implement comprehensive logging and monitoring for security events."
+    }, 
+    {
+        "Status": "Exception", 
+        "Description": "Lack of Content Security Policy (CSP) allows for potential cross-site scripting (XSS) attacks.", 
+        "Request": "", 
+        "Host": "example.com", 
+        "Response": "", 
+        "OWASP Top 10": "A04: Insecure Design", 
+        "ID": 8, 
+        "Notes": "Implement a strong Content Security Policy to prevent XSS attacks."
+    }
+]
