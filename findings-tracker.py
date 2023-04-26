@@ -14,7 +14,7 @@ import json
 import base64
 import os
 
-VERSION = "1.0.1"
+VERSION = "1.0.2"
 BsRed = Color(255, 100, 101)
 BsOrange = Color(255, 200, 100)
 BsGreen = Color(100, 255, 100)
@@ -160,7 +160,7 @@ class NotesRenderer(DefaultTableCellRenderer):
 
         return text_area
 
-class BurpExtender(IBurpExtender, ITab, IContextMenuFactory, IMessageEditorController):
+class BurpExtender(IBurpExtender, ITab, IContextMenuFactory):
     class MessageController(IMessageEditorController):
         def __init__(self, request, response, helpers):
             self._request = request
@@ -182,13 +182,13 @@ class BurpExtender(IBurpExtender, ITab, IContextMenuFactory, IMessageEditorContr
     def registerExtenderCallbacks(self, callbacks):
         self.callbacks = callbacks
         self.helpers = callbacks.getHelpers()
+        callbacks.setExtensionName("Findings Tracker - " + VERSION)
         self.last_exported_file = None
         self.is_importing = False
 
         self.initUI()
 
         callbacks.addSuiteTab(self)
-        callbacks.setExtensionName("Findings Tracker")
         callbacks.registerContextMenuFactory(self)
 
     def initUI(self):
@@ -260,7 +260,7 @@ class BurpExtender(IBurpExtender, ITab, IContextMenuFactory, IMessageEditorContr
 
         self.panel.add(button_panel, BorderLayout.SOUTH)
 
-        print("Findings Tracker v" + VERSION + " loaded.")
+        print("Findings Tracker v" + VERSION + " loaded successfully.")
 
     def handle_table_change(self, event):
         if self.is_importing:
@@ -341,7 +341,7 @@ class BurpExtender(IBurpExtender, ITab, IContextMenuFactory, IMessageEditorContr
         request_label.setBorder(EmptyBorder(10, 10, 0, 0))
         request_panel.add(request_label, BorderLayout.NORTH)
 
-        request_editor = self.callbacks.createMessageEditor(self, False)
+        request_editor = self.callbacks.createMessageEditor(message_controller, False)
         request_editor.setMessage(request, True)
         request_panel.add(request_editor.getComponent(), BorderLayout.CENTER)
 
@@ -355,7 +355,7 @@ class BurpExtender(IBurpExtender, ITab, IContextMenuFactory, IMessageEditorContr
         response_label.setBorder(EmptyBorder(10, 10, 0, 0))
         response_panel.add(response_label, BorderLayout.NORTH)
 
-        response_editor = self.callbacks.createMessageEditor(self, False)
+        response_editor = self.callbacks.createMessageEditor(message_controller, False)
         response_editor.setMessage(response, False)
         response_panel.add(response_editor.getComponent(), BorderLayout.CENTER)
 
